@@ -7,7 +7,7 @@ int	main(void)
 
 	InitWindow(screenWidth, screenHeight, "Throwing Game Mechanics");
 
-	SetTargetFPD(60);
+	SetTargetFPS(60);
 
 	while(!WindowShouldClose())
 	{
