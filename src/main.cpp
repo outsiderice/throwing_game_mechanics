@@ -20,7 +20,9 @@ int	main(void)
 		BeginDrawing();
 
 			ClearBackground(RAYWHITE);
-			DrawText("Hello world", 190, 200, 20, LIGHTGRAY);
+			DrawText("Our protagonist, the humble rectangle!", 20, 20, 20, DARKGRAY);
+			
+			DrawRectangle(screenWidth/4*2 - 40, 300, 80, 100, BLACK);
 		EndDrawing();
 		// ------------------
 	}
