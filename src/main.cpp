@@ -1,4 +1,5 @@
 #include <raylib.h>
+#include <raymath.h>
 
 int	main(void)
 {
@@ -9,8 +10,7 @@ int	main(void)
 
 	InitWindow(screenWidth, screenHeight, "Throwing Game Mechanics");
 
-	Vector2	playerPosition = { (float)screenWidth/2, 300};
-	Vector2	playerSize = { 60, 80};
+	Rectangle	playerRec = { (float)screenWidth/2-40, 300, 60, 80};
 
 	SetTargetFPS(60);
 	// -------------------------------------------------------------------
@@ -20,8 +20,11 @@ int	main(void)
 	{
 		//Update 
 		//------------------------------------------------------------
-		if (IsKeyDown(KEY_RIGHT)) playerPosition.x += 4.0f;
-		if (IsKeyDown(KEY_LEFT)) playerPosition.x -= 4.0f;
+		if (IsKeyDown(KEY_RIGHT)) playerRec.x += 4.0f;
+		if (IsKeyDown(KEY_LEFT)) playerRec.x -= 4.0f;
+
+		//Limit player X position to inside the screen
+		playerRec.x = Clamp(playerRec.x, 0, screenWidth - playerRec.width);
 		//------------------------------------------------------------
 
 		// Draw
@@ -31,7 +34,7 @@ int	main(void)
 			ClearBackground(RAYWHITE);
 			DrawText("Move with [LEFT] and [RIGHT] arrow keys", 20, 20, 20, DARKGRAY);
 			
-			DrawRectangleV(playerPosition, playerSize, BLACK);
+			DrawRectangleRec(playerRec, BLACK);
 		EndDrawing();
 		// -----------------------------------------------------------
 	}
