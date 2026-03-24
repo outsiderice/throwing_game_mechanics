@@ -10,7 +10,7 @@ int	main(void)
 
 	InitWindow(screenWidth, screenHeight, "Throwing Game Mechanics");
 
-	Rectangle	playerRec = { (float)screenWidth/2-40, 300, 60, 80};
+	Rectangle	playerRec = { (float)screenWidth/2-30, 300, 60, 80};
 
 	SetTargetFPS(60);
 	// -------------------------------------------------------------------
