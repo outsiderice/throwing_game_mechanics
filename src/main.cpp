@@ -32,10 +32,12 @@ int	main(void)
 		BeginDrawing();
 
 			ClearBackground(RAYWHITE);
-			DrawText("Move with [LEFT] and [RIGHT] arrow keys", 20, 20, 20, DARKGRAY);
+			DrawText("Move with [LEFT] and [RIGHT] arrow keys\n\n[ESC] to exit", 20, 20, 20, DARKGRAY);
 			
-			DrawRectangleRec(playerRec, BLACK);
+			DrawRectangleLines(screenWidth/2 - 60, 50, 120, 180, BLACK);
+			DrawCircle(screenWidth/5, 350, 30, DARKGRAY);
 		EndDrawing();
+			DrawRectangleRec(playerRec, BLACK);
 		// -----------------------------------------------------------
 	}
 
