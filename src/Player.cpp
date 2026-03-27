@@ -19,14 +19,14 @@ Rectangle	Player::getBody(void) const
 {
 	return (_body);
 }
+
 /*
 void	Player::downArrowAction()
 {
 	if (_isHolding == true)
-		//put down
-	else
-	{
-
-	}
+		putDown();
+	else if (there's a collision with object)
+		//pick up object
+	return ;
 }
 */

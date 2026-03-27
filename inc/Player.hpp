@@ -15,6 +15,7 @@ class	Player{
 		Rectangle	getBody(void) const;
 
 //		void	downArrowAction();
+//		void	putDown();
 //		void	throwObject();
 
 	private:
