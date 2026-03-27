@@ -2,7 +2,7 @@ NAME = game
 
 INC = inc/
 
-SRC = src/main.cpp 
+SRC = src/main.cpp src/Player.cpp 
 
 BUILD_DIR = .build
 OBJ = $(SRC:%.cpp=$(BUILD_DIR)/%.o)

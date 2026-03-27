@@ -1,7 +1,7 @@
 #ifndef PLAYER_HPP
 # define PLAYER_HPP
 
-#include <raylibh.h>
+#include <raylib.h>
 #include <raymath.h>
 
 class	Player{
@@ -9,14 +9,13 @@ class	Player{
 		Player(void);
 
 		//Setters
-		void	setPosition(int key);
+		void	setPosition(float direction);
 
 		//Getters
-		bool		isHolding() const;
-		Rectangle	getBody() const;
+		Rectangle	getBody(void) const;
 
-		void	downArrowAction();
-		void	throwObject();
+//		void	downArrowAction();
+//		void	throwObject();
 
 	private:
 		Rectangle	_body;
