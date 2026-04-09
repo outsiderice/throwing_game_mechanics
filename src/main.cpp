@@ -11,7 +11,10 @@ int	main(void)
 
 	InitWindow(screenWidth, screenHeight, "Throwing Game Mechanics");
 
-	Player	player;
+	Player		player;
+	Rectangle	object = {(float)GetScreenWidth()/5, 350, 30, 50};
+
+	bool	collision = false;
 
 	SetTargetFPS(60);
 	// -------------------------------------------------------------------
@@ -25,7 +28,8 @@ int	main(void)
 			player.setPosition(1.0f);
 		if (IsKeyDown(KEY_LEFT)) 
 			player.setPosition(-1.0f);
-
+		if (IsKeyDown(KEY_DOWN))
+			player.downArrowAction();
 		//------------------------------------------------------------
 
 		// Draw
@@ -36,9 +40,9 @@ int	main(void)
 			DrawText("Move with [LEFT] and [RIGHT] arrow keys\n\n[ESC] to exit", 20, 20, 20, DARKGRAY);
 			
 			DrawRectangleLines(screenWidth/2 - 60, 50, 120, 180, BLACK);
-			DrawCircle(screenWidth/5, 350, 30, DARKGRAY);
-		EndDrawing();
 			DrawRectangleRec(player.getBody(), BLACK);
+			DrawRectangleRec(object , DARKGRAY);
+		EndDrawing();
 		// -----------------------------------------------------------
 	}
 
