@@ -39,7 +39,7 @@ int	main(void)
 			ClearBackground(RAYWHITE);
 			DrawText("Move with [LEFT] and [RIGHT] arrow keys\n\n[ESC] to exit", 20, 20, 20, DARKGRAY);
 			
-			DrawRectangleLines(screenWidth/2 - 60, 50, 120, 180, BLACK);
+			DrawRectangleLines((float)GetScreenWidth()/2 - 60, 50, 120, 180, BLACK);
 			DrawRectangleRec(player.getBody(), BLACK);
 			DrawRectangleRec(object , DARKGRAY);
 		EndDrawing();
