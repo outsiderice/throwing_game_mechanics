@@ -20,13 +20,21 @@ Rectangle	Player::getBody(void) const
 	return (_body);
 }
 
-/*
-void	Player::downArrowAction()
+void	Player::downArrowAction(bool collision)
 {
 	if (_isHolding == true)
 		putDown();
-	else if (there's a collision with object)
-		//pick up object
+	else if (collision)
+		pickUp();
 	return ;
 }
-*/
+
+void	Player::putDown()
+{
+	_isHolding = false;
+}
+
+void	Player::pickUp()
+{
+	_isHolding = true;
+}

@@ -14,8 +14,9 @@ class	Player{
 		//Getters
 		Rectangle	getBody(void) const;
 
-//		void	downArrowAction();
-//		void	putDown();
+		void	downArrowAction(bool collision);
+		void	putDown();
+		void	pickUp();
 //		void	throwObject();
 
 	private:

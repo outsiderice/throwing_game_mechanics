@@ -2,6 +2,8 @@
 #include <raymath.h>
 #include "Player.hpp"
 
+#define MAX_OBJECTS_COUNT	1
+
 int	main(void)
 {
 	// Initialization
@@ -15,6 +17,14 @@ int	main(void)
 	Rectangle	object = {(float)GetScreenWidth()/5, 350, 30, 50};
 
 	bool	collision = false;
+
+	int 	objectCount = 0; //number of existant objects
+
+//	Rectangle	objects[MAX_OBJECTS_COUNT] = { 0 };
+	for (; < MAX_OBJECTS_COUNT; i++)
+	{
+		objects[]
+	}
 
 	SetTargetFPS(60);
 	// -------------------------------------------------------------------
@@ -31,7 +41,11 @@ int	main(void)
 		if (IsKeyDown(KEY_DOWN))
 			player.downArrowAction(collision);
 
-		collision = checkCollisionRecs(player.getBody(), object);
+		for (int i = 0; i < objectCount; i++)
+		{
+			collision = checkCollisionRecs(player.getBody(), object);
+			player.setInReach(objects[i]);
+		}
 		//------------------------------------------------------------
 
 		// Draw
