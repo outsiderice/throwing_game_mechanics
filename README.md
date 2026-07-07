@@ -5,7 +5,8 @@ Mechanics for a simple throwing game
 
 Clone the repository then:
 
-`cmake -B build
- cmake --build build
+```
+cmake -B build
+cmake --build build
 ./build/game
-`
+```
