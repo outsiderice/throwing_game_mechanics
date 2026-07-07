@@ -31,7 +31,7 @@ int	main(void)
 		if (IsKeyDown(KEY_DOWN))
 			player.downArrowAction(collision, &object);
 
-		CheckCollisionRecs(player.getBody(), object);
+		collision = CheckCollisionRecs(player.getBody(), object);
 		//------------------------------------------------------------
 
 		// Draw
