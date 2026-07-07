@@ -1,2 +1,3 @@
-- [ ] Object pool class
-- [ ] Finish pick up and down action
+- [ ] Make pick up and drop down work with one object
+- [ ] Throwing action
+- [ ] Add Object pool class

@@ -20,21 +20,17 @@ Rectangle	Player::getBody(void) const
 	return (_body);
 }
 
-void	Player::downArrowAction(bool collision)
+void	Player::downArrowAction(bool collision, Rectangle *object)
 {
 	if (_isHolding == true)
-		putDown();
+	{
+		*object = {getBody().x, 350, 30, 50};
+		_isHolding = false;
+	}
 	else if (collision)
-		pickUp();
+	{
+		*object = {getBody().x, getBody().y, 30, 50};
+		_isHolding = true;
+	}
 	return ;
-}
-
-void	Player::putDown()
-{
-	_isHolding = false;
-}
-
-void	Player::pickUp()
-{
-	_isHolding = true;
 }
